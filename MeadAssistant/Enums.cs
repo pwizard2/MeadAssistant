@@ -30,5 +30,7 @@ namespace MeadAssistant
 	
 	public enum SulfurProduction{Low=0, Medium=1, High=2};
 	
+	public enum BatchProtocol{Organic=0, Inorganic=1};
+	
 	//public enum TOSNAFactor{Low=0.75, Medium=0.90, High=1.25}
 }

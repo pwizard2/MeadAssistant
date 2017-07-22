@@ -35,17 +35,20 @@ namespace MeadAssistant
 	/// </summary>
 	public partial class TOSNA : UserControl
 	{
+		//###########################################################################
 		/// <summary>
 		/// Gets or sets the amount of nitrogen this batch requires. --Will Kraft (7/22/17).
 		/// </summary>
 		internal NitrogenDemands NReq{ get; set; }
 		
+		//###########################################################################
 		/// <summary>
 		/// Gets the TOSNA 2.0 nitrogen factor. --Will Kraft (7/22/17).
 		/// </summary>
 		internal double NitrogenFactor {
 			
 			get {
+			
 				switch (NReq) {
 					default: // Low 
 						return 0.75;
@@ -53,9 +56,23 @@ namespace MeadAssistant
 					case NitrogenDemands.Medium:
 						return 0.9;						
 				
-					case NitrogenDemands.High:
+					case NitrogenDemands.High:								
 						return 1.25;
-				}
+				}				
+			}
+		}
+		
+		//###########################################################################
+		/// <summary>
+		/// Gets or sets whether we are using organic TOSNA protocol or Inorganic 
+		/// TiOSNA variant. --Will Kraft (7/22/17).
+		/// </summary>
+		public BatchProtocol Schedule {
+			get {
+				if (radFermO.Checked)
+					return BatchProtocol.Organic;
+				
+				return BatchProtocol.Inorganic;
 			}
 		}
 		
