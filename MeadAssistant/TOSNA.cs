@@ -21,10 +21,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
+ 
 using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+
 
 namespace MeadAssistant
 {
@@ -33,16 +35,56 @@ namespace MeadAssistant
 	/// </summary>
 	public partial class TOSNA : UserControl
 	{
+		/// <summary>
+		/// Gets or sets the amount of nitrogen this batch requires. --Will Kraft (7/22/17).
+		/// </summary>
+		internal NitrogenDemands NReq{ get; set; }
+		
+		/// <summary>
+		/// Gets the TOSNA 2.0 nitrogen factor. --Will Kraft (7/22/17).
+		/// </summary>
+		internal double NitrogenFactor {
+			
+			get {
+				switch (NReq) {
+					default: // Low 
+						return 0.75;
+					
+					case NitrogenDemands.Medium:
+						return 0.9;						
+				
+					case NitrogenDemands.High:
+						return 1.25;
+				}
+			}
+		}
+		
+		//###########################################################################
 		public TOSNA()
 		{
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
-			
+			trackBar1.Value = 0;
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
+		}
+		
+		//###########################################################################
+		void Label2Click(object sender, EventArgs e)
+		{
+	
+		}
+		
+		//###########################################################################
+		void TrackBar1ValueChanged(object sender, EventArgs e)
+		{
+			var _idx = ((TrackBar)sender).Value;
+			NReq = (NitrogenDemands)_idx;
+			lblYeastReq.Text = NReq.ToString();
+			
 		}
 	}
 }

@@ -43,9 +43,9 @@ namespace TOSNACalculator
 		{
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.tosna1 = new MeadAssistant.TOSNA();
 			this.tabFortify = new System.Windows.Forms.TabPage();
 			this.fortifier1 = new TOSNACalculator.Fortifier();
-			this.tosna1 = new MeadAssistant.TOSNA();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.tabFortify.SuspendLayout();
@@ -61,7 +61,7 @@ namespace TOSNACalculator
 			this.tabControl1.Name = "tabControl1";
 			this.tabControl1.Padding = new System.Drawing.Point(6, 6);
 			this.tabControl1.SelectedIndex = 0;
-			this.tabControl1.Size = new System.Drawing.Size(591, 375);
+			this.tabControl1.Size = new System.Drawing.Size(591, 443);
 			this.tabControl1.TabIndex = 1;
 			// 
 			// tabPage1
@@ -71,9 +71,17 @@ namespace TOSNACalculator
 			this.tabPage1.Location = new System.Drawing.Point(4, 31);
 			this.tabPage1.Name = "tabPage1";
 			this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage1.Size = new System.Drawing.Size(583, 340);
+			this.tabPage1.Size = new System.Drawing.Size(583, 408);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "TOSNA Schedule";
+			// 
+			// tosna1
+			// 
+			this.tosna1.BackColor = System.Drawing.SystemColors.Control;
+			this.tosna1.Location = new System.Drawing.Point(44, 34);
+			this.tosna1.Name = "tosna1";
+			this.tosna1.Size = new System.Drawing.Size(464, 311);
+			this.tosna1.TabIndex = 0;
 			// 
 			// tabFortify
 			// 
@@ -95,19 +103,11 @@ namespace TOSNACalculator
 			this.fortifier1.Size = new System.Drawing.Size(436, 246);
 			this.fortifier1.TabIndex = 3;
 			// 
-			// tosna1
-			// 
-			this.tosna1.BackColor = System.Drawing.SystemColors.Control;
-			this.tosna1.Location = new System.Drawing.Point(209, 93);
-			this.tosna1.Name = "tosna1";
-			this.tosna1.Size = new System.Drawing.Size(150, 150);
-			this.tosna1.TabIndex = 0;
-			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(591, 381);
+			this.ClientSize = new System.Drawing.Size(591, 449);
 			this.Controls.Add(this.tabControl1);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;

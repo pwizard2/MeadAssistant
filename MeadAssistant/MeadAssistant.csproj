@@ -113,6 +113,9 @@
     <EmbeddedResource Include="Sulfite.resx">
       <DependentUpon>Sulfite.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TOSNA.resx">
+      <DependentUpon>TOSNA.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

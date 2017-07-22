@@ -23,7 +23,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 using System;
 
-namespace TOSNACalculator
+namespace MeadAssistant
 {
 	
 	public enum NitrogenDemands{Low=0, Medium=1, High=2};

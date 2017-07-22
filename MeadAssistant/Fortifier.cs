@@ -30,7 +30,7 @@ using System.Windows.Forms;
 namespace TOSNACalculator
 {
 	/// <summary>
-	/// Description of Fortifier.
+	/// User control for calculating booze additions to fortify a mead to a specific ABV.
 	/// </summary>
 	public partial class Fortifier : UserControl
 	{
